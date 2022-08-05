@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>New Page</h1>
+
+    <form action="{% url 'post' %}" method="get">
+        <input type="text" placeholder="Page Name" name="title" style="display:block; border-color: black; border-width: 1px; border-bottom: none;">
+        <textarea rows="4" cols="50" placeholder="# {Page Title}           
+                              
+{Contents}" name="textarea" style="border-color:black"></textarea>
+        <input type="submit" value="Submit" style="display:block; background-color: rgb(0, 106, 255); color:white;">
+    </form>
+
+{% endblock %}

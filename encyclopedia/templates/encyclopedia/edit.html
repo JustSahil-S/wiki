@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Edit Page</h1>
+
+    <form action="{% url 'append' %}" method="get">
+        <input type="text" disabled placeholder="Page Name" name="title" value="{{ name }}" style="display:block; border-color: black; border-width: 1px; border-bottom: none;"></input>
+        <input type="hidden" name="title" value="{{ name }}"></input>
+        <textarea rows="4" cols="50" placeholder="# {Page Title}           
+                              
+{Contents}" name="textarea" style="border-color:black">{{ desc }}</textarea>
+        <input type="submit" value="Save" style="display:block; background-color: rgb(0, 106, 255); color:white;">
+    </form>
+
+{% endblock %}
