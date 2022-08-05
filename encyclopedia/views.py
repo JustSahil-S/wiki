@@ -36,7 +36,7 @@ def post(request):
         util.save_entry(title,desc)
         return HttpResponseRedirect(f'/wiki/{title}')
     else:
-        return render(request, "encyclopedia/error.html", {
+        return render(request, "encyclopedia/error.html", {"title":title
 
         })
 def edit(request):
